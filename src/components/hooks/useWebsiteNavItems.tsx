@@ -74,81 +74,81 @@ export function useWebsiteNavItems(websiteId: string) {
         },
       ],
     },
-    {
-      label: t(labels.behavior),
-      items: [
-        {
-          id: 'goals',
-          label: t(labels.goals),
-          icon: <Target />,
-          path: renderPath('/goals'),
-        },
-        {
-          id: 'funnel',
-          label: t(labels.funnels),
-          icon: <Funnel />,
-          path: renderPath('/funnels'),
-        },
-        {
-          id: 'journeys',
-          label: t(labels.journeys),
-          icon: <Path />,
-          path: renderPath('/journeys'),
-        },
-        {
-          id: 'retention',
-          label: t(labels.retention),
-          icon: <Magnet />,
-          path: renderPath('/retention'),
-        },
-        {
-          id: 'replays',
-          label: t(labels.replays),
-          icon: <Video />,
-          path: renderPath('/replays'),
-        },
-      ],
-    },
-    {
-      label: t(labels.audience),
-      items: [
-        {
-          id: 'segments',
-          label: t(labels.segments),
-          icon: <ChartPie />,
-          path: renderPath('/segments'),
-        },
-        {
-          id: 'cohorts',
-          label: t(labels.cohorts),
-          icon: <UserPlus />,
-          path: renderPath('/cohorts'),
-        },
-      ],
-    },
-    {
-      label: t(labels.growth),
-      items: [
-        {
-          id: 'utm',
-          label: t(labels.utm),
-          icon: <Tag />,
-          path: renderPath('/utm'),
-        },
-        {
-          id: 'revenue',
-          label: t(labels.revenue),
-          icon: <Money />,
-          path: renderPath('/revenue'),
-        },
-        {
-          id: 'attribution',
-          label: t(labels.attribution),
-          icon: <Network />,
-          path: renderPath('/attribution'),
-        },
-      ],
-    },
+    // {
+    //   label: t(labels.behavior),
+    //   items: [
+    //     {
+    //       id: 'goals',
+    //       label: t(labels.goals),
+    //       icon: <Target />,
+    //       path: renderPath('/goals'),
+    //     },
+    //     {
+    //       id: 'funnel',
+    //       label: t(labels.funnels),
+    //       icon: <Funnel />,
+    //       path: renderPath('/funnels'),
+    //     },
+    //     {
+    //       id: 'journeys',
+    //       label: t(labels.journeys),
+    //       icon: <Path />,
+    //       path: renderPath('/journeys'),
+    //     },
+    //     {
+    //       id: 'retention',
+    //       label: t(labels.retention),
+    //       icon: <Magnet />,
+    //       path: renderPath('/retention'),
+    //     },
+    //     {
+    //       id: 'replays',
+    //       label: t(labels.replays),
+    //       icon: <Video />,
+    //       path: renderPath('/replays'),
+    //     },
+    //   ],
+    // },
+    // {
+    //   label: t(labels.audience),
+    //   items: [
+    //     {
+    //       id: 'segments',
+    //       label: t(labels.segments),
+    //       icon: <ChartPie />,
+    //       path: renderPath('/segments'),
+    //     },
+    //     {
+    //       id: 'cohorts',
+    //       label: t(labels.cohorts),
+    //       icon: <UserPlus />,
+    //       path: renderPath('/cohorts'),
+    //     },
+    //   ],
+    // },
+    // {
+    //   label: t(labels.growth),
+    //   items: [
+    //     {
+    //       id: 'utm',
+    //       label: t(labels.utm),
+    //       icon: <Tag />,
+    //       path: renderPath('/utm'),
+    //     },
+    //     {
+    //       id: 'revenue',
+    //       label: t(labels.revenue),
+    //       icon: <Money />,
+    //       path: renderPath('/revenue'),
+    //     },
+    //     {
+    //       id: 'attribution',
+    //       label: t(labels.attribution),
+    //       icon: <Network />,
+    //       path: renderPath('/attribution'),
+    //     },
+    //   ],
+    // },
   ];
 
   const selectedKey = items
