@@ -54,18 +54,18 @@ export function SideNav(props: any) {
       path: '/websites',
       icon: <Globe />,
     },
-    {
-      id: 'links',
-      label: t(labels.links),
-      path: '/links',
-      icon: <LinkIcon />,
-    },
-    {
-      id: 'pixels',
-      label: t(labels.pixels),
-      path: '/pixels',
-      icon: <Grid2x2 />,
-    },
+    // {
+    //   id: 'links',
+    //   label: t(labels.links),
+    //   path: '/links',
+    //   icon: <LinkIcon />,
+    // },
+    // {
+    //   id: 'pixels',
+    //   label: t(labels.pixels),
+    //   path: '/pixels',
+    //   icon: <Grid2x2 />,
+    // },
   ];
 
   return (
@@ -93,7 +93,7 @@ export function SideNav(props: any) {
         <Row paddingX="3" alignItems="center" justifyContent="space-between" flexGrow="1">
           {!isCollapsed && (
             <IconLabel icon={<Logo />}>
-              <Text weight="bold">Qlytics</Text>
+              <Text weight="medium">Qlytics</Text>
             </IconLabel>
           )}
           <PanelButton />
