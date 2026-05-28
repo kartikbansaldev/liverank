@@ -10,8 +10,8 @@ import {
 } from '@umami/react-zen';
 import { useEffect, useMemo, useState } from 'react';
 import { useMessages } from '@/components/hooks';
-import { LinkSelect } from '@/components/input/LinkSelect';
-import { PixelSelect } from '@/components/input/PixelSelect';
+// import { LinkSelect } from '@/components/input/LinkSelect';
+// import { PixelSelect } from '@/components/input/PixelSelect';
 import { WebsiteSelect } from '@/components/input/WebsiteSelect';
 import type { BoardComponentConfig } from '@/lib/types';
 import {
@@ -51,7 +51,7 @@ export function BoardComponentSelect({
   const [selectedDef, setSelectedDef] = useState<ComponentDefinition | null>(null);
   const [configValues, setConfigValues] = useState<Record<string, any>>({});
   const [selectedEntityType, setSelectedEntityType] = useState<BoardEntityType>(
-    initialEntity.entityType || boardEntityType || BOARD_ENTITY_TYPES.website,
+    BOARD_ENTITY_TYPES.website,
   );
   const [selectedEntityId, setSelectedEntityId] = useState(
     initialEntity.entityId || boardEntityId,
@@ -99,9 +99,7 @@ export function BoardComponentSelect({
 
     setSelectedDef(definition);
     setConfigValues(getDefaultConfigValues(definition, initialConfig));
-    setSelectedEntityType(
-      initialEntity.entityType || boardEntityType || BOARD_ENTITY_TYPES.website,
-    );
+    setSelectedEntityType(BOARD_ENTITY_TYPES.website);
     setSelectedEntityId(initialEntity.entityId || boardEntityId);
     setTitle(initialConfig.title ?? definition.name);
     setDescription(initialConfig.description || '');
@@ -212,19 +210,20 @@ export function BoardComponentSelect({
                 </Text>
                 <Select value={selectedEntityType} onChange={handleEntityTypeChange}>
                   <ListItem id={BOARD_ENTITY_TYPES.website}>{t(labels.website)}</ListItem>
-                  <ListItem id={BOARD_ENTITY_TYPES.pixel}>{t(labels.pixel)}</ListItem>
-                  <ListItem id={BOARD_ENTITY_TYPES.link}>{t(labels.link)}</ListItem>
+                  {/* <ListItem id={BOARD_ENTITY_TYPES.pixel}>{t(labels.pixel)}</ListItem>
+                  <ListItem id={BOARD_ENTITY_TYPES.link}>{t(labels.link)}</ListItem> */}
                 </Select>
               </Column>
               <Column gap="2">
                 <Text size="sm" color="muted">
-                  {selectedEntityType === BOARD_ENTITY_TYPES.pixel
+                  {/* {selectedEntityType === BOARD_ENTITY_TYPES.pixel
                     ? t(labels.pixel)
                     : selectedEntityType === BOARD_ENTITY_TYPES.link
                       ? t(labels.link)
-                      : t(labels.website)}
+                      : t(labels.website)} */}
+                  {t(labels.website)}
                 </Text>
-                {selectedEntityType === BOARD_ENTITY_TYPES.pixel ? (
+                {/* {selectedEntityType === BOARD_ENTITY_TYPES.pixel ? (
                   <PixelSelect
                     pixelId={selectedEntityId}
                     teamId={teamId}
@@ -238,14 +237,14 @@ export function BoardComponentSelect({
                     placeholder={t(labels.selectLink)}
                     onChange={setSelectedEntityId}
                   />
-                ) : (
-                  <WebsiteSelect
-                    websiteId={selectedEntityId}
-                    teamId={teamId}
-                    placeholder={t(labels.selectWebsite)}
-                    onChange={setSelectedEntityId}
-                  />
-                )}
+                ) : ( */}
+                <WebsiteSelect
+                  websiteId={selectedEntityId}
+                  teamId={teamId}
+                  placeholder={t(labels.selectWebsite)}
+                  onChange={setSelectedEntityId}
+                />
+                {/* ) */}
               </Column>
             </>
           )}

@@ -412,7 +412,7 @@
     "reset-website": "To reset this website, type {confirmation} in the box below to confirm.",
     "reset-website-warning": "All statistics for this website will be deleted, but your settings will remain intact.",
     "saved": "Saved.",
-    "select-board-entity-first": "Select a website, pixel, or link first.",
+    "select-board-entity-first": "Select a website first.",
     "select-component-preview": "Select a component to preview",
     "select-website-first": "Select a website first",
     "sever-error": "Server error",
