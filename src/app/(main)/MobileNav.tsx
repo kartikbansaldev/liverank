@@ -18,30 +18,30 @@ export function MobileNav() {
   const isMain = !websiteId && !isAdmin && !isSettings;
 
   const links = [
-    {
-      id: 'boards',
-      label: t(labels.boards),
-      path: '/boards',
-      icon: <LayoutDashboard />,
-    },
+    // {
+    //   id: 'boards',
+    //   label: t(labels.boards),
+    //   path: '/boards',
+    //   icon: <LayoutDashboard />,
+    // },
     {
       id: 'websites',
       label: t(labels.websites),
       path: '/websites',
       icon: <Globe />,
     },
-    {
-      id: 'links',
-      label: t(labels.links),
-      path: '/links',
-      icon: <LinkIcon />,
-    },
-    {
-      id: 'pixels',
-      label: t(labels.pixels),
-      path: '/pixels',
-      icon: <Grid2x2 />,
-    },
+    // {
+    //   id: 'links',
+    //   label: t(labels.links),
+    //   path: '/links',
+    //   icon: <LinkIcon />,
+    // },
+    // {
+    //   id: 'pixels',
+    //   label: t(labels.pixels),
+    //   path: '/pixels',
+    //   icon: <Grid2x2 />,
+    // },
   ];
 
   return (
@@ -78,7 +78,7 @@ export function MobileNav() {
       </MobileMenuButton>
       <Row alignItems="center" justifyContent="center" flexGrow={1}>
         <IconLabel icon={<Logo />} style={{ width: 'auto' }}>
-          <Text weight="bold">umami</Text>
+          <Text weight="medium">Qlytics</Text>
         </IconLabel>
       </Row>
     </Grid>

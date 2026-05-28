@@ -42,12 +42,12 @@ export function SideNav(props: any) {
           },
         ]
       : []),
-    {
-      id: 'boards',
-      label: t(labels.boards),
-      path: '/boards',
-      icon: <LayoutDashboard />,
-    },
+    // {
+    //   id: 'boards',
+    //   label: t(labels.boards),
+    //   path: '/boards',
+    //   icon: <LayoutDashboard />,
+    // },
     {
       id: 'websites',
       label: t(labels.websites),
