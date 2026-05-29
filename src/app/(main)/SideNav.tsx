@@ -82,6 +82,7 @@ export function SideNav(props: any) {
         width: isCollapsed ? '60px' : '240px',
         transition: 'width 0.2s ease-in-out',
         overflow: 'hidden',
+        backgroundColor: "#F6F6F6",
       }}
       className="sidenav",
     >
