@@ -45,9 +45,7 @@ export function ChangeLabel({
       style={style}
       alignItems="center"
       alignSelf="flex-start"
-      paddingX="2"
-      paddingY="1"
-      gap="2"
+      gap="1"
     >
       {!neutral && (
         <Icon rotate={positive ? -90 : 90} size={size}>

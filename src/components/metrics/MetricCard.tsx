@@ -1,5 +1,5 @@
 import { useSpring } from '@react-spring/web';
-import { Button, Column, Icon, Row, Text, Tooltip, TooltipTrigger } from '@umami/react-zen';
+import { Button, Column, Icon, Row, Text, Tooltip, TooltipTrigger, Flexbox } from '@umami/react-zen';
 import type { ReactNode } from 'react';
 import { AnimatedDiv } from '@/components/common/AnimatedDiv';
 import { Info } from '@/components/icons';
@@ -40,9 +40,9 @@ export const MetricCard = ({
   return (
     <Column
       justifyContent="center"
-      paddingX="6"
-      paddingY="4"
-      borderRadius="10px"
+      paddingX="5"
+      paddingY="5"
+      borderRadius="md"
       // backgroundColor="surface-base"
       // style={backgroundColor ? { backgroundColor } : undefined}
       style={{
@@ -50,7 +50,7 @@ export const MetricCard = ({
         color,
       }}
       border="none"
-      gap="4"
+      gap="7"
     >
       {showLabel && (
         <Row justifyContent="space-between" alignItems="flex-start">
@@ -69,14 +69,27 @@ export const MetricCard = ({
           )}
         </Row>
       )}
-      <Text weight="bold" wrap="nowrap">
-        <AnimatedDiv title={value?.toString()}>{props?.x?.to(x => formatValue(x))}</AnimatedDiv>
-      </Text>
-      {showChange && (
-        <ChangeLabel value={change} title={formatValue(change)} reverseColors={reverseColors}>
-          <AnimatedDiv>{changeProps?.x?.to(x => `${Math.abs(~~x)}%`)}</AnimatedDiv>
-        </ChangeLabel>
-      )}
+
+      <Flexbox direction="column" gap="1">
+        <Text size="5xl" weight="medium" wrap="nowrap">
+          <AnimatedDiv title={value?.toString()}>
+            {props?.x?.to(x => formatValue(x))}
+          </AnimatedDiv>
+        </Text>
+
+        {showChange && (
+          <ChangeLabel
+            value={change}
+            title={formatValue(change)}
+            reverseColors={reverseColors}
+          >
+            <AnimatedDiv>
+              {changeProps?.x?.to(x => `${Math.abs(~~x)}%`)}
+            </AnimatedDiv>
+          </ChangeLabel>
+        )}
+      </Flexbox>
+
     </Column>
   );
 };
