@@ -71,8 +71,8 @@ export function SideNav(props: any) {
   return (
     <Column
       {...props}
-      backgroundColor="surface-base"
-      border
+      backgroundColor="#F6F6F6"
+      border=''
       borderRadius
       paddingX="2"
       flexGrow="1"
@@ -116,8 +116,8 @@ export function SideNav(props: any) {
                     <Focusable>
                       <Row
                         alignItems="center"
-                        hover={{ backgroundColor: 'surface-sunken' }}
-                        backgroundColor={isSelected ? 'surface-sunken' : undefined}
+                        hover={{ backgroundColor: '#E1E7E9' }}
+                        backgroundColor={isSelected ? '#E1E7E9' : undefined}
                         borderRadius
                         minHeight="40px"
                       >
