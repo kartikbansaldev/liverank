@@ -84,7 +84,6 @@ export function SideNav(props: any) {
         overflow: 'hidden',
         backgroundColor: "#F6F6F6",
       }}
-      className="sidenav",
     >
       <Row
         alignItems="center"
