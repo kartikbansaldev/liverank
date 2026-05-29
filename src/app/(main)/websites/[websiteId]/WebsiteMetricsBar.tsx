@@ -30,6 +30,7 @@ export function WebsiteMetricsBar({
           change: visitors - comparison.visitors,
           formatValue: formatLongNumber,
           backgroundColor: '#C5CAFF',
+          
         },
         {
           value: visits,

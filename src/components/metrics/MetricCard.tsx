@@ -41,7 +41,8 @@ export const MetricCard = ({
       paddingX="6"
       paddingY="4"
       borderRadius
-      backgroundColor={backgroundColor ?? 'surface-base'}
+      backgroundColor="surface-base"
+      style={backgroundColor ? { backgroundColor } : undefined}
       border
       gap="4"
     >
