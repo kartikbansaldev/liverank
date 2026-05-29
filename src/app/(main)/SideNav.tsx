@@ -83,6 +83,7 @@ export function SideNav(props: any) {
         transition: 'width 0.2s ease-in-out',
         overflow: 'hidden',
       }}
+      className="sidenav",
     >
       <Row
         alignItems="center"
