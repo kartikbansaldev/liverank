@@ -117,10 +117,14 @@ export function SideNav(props: any) {
                     <Focusable>
                       <Row
                         alignItems="center"
-                        hover={{ backgroundColor: '#E1E7E9' }}
-                        backgroundColor={isSelected ? '#E1E7E9' : undefined}
+                        // hover={{ backgroundColor: '#E1E7E9' }}
+                        // backgroundColor={isSelected ? '#E1E7E9' : undefined}
                         borderRadius
                         minHeight="40px"
+                        style={{
+                          backgroundColor: isSelected ? '#E1E7E9' : undefined,
+                          hover: { backgroundColor: '#E1E7E9' },
+                    }}
                       >
                         <IconLabel
                           icon={icon}
