@@ -1,7 +1,7 @@
 :root {
   --font-family: var(--font-inter), sans-serif;
-  --primary: oklch(62.3% 0.214 259.815);
-  --primary-foreground: oklch(98.5% 0 0);
+  --primary: #606BD0;
+  --primary-foreground: #FFFFFF;
 }
 
 html,
@@ -9,7 +9,7 @@ body {
   font-family: var(--font-family), sans-serif;
   font-size: 14px;
   color: var(--text-primary);
-  background-color: var(--surface-raised);
+  background-color: #FFFFFF;
   width: 100%;
   min-height: 100vh;
 }
