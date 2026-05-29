@@ -14,6 +14,7 @@ export interface MetricCardProps {
   tooltip?: ReactNode;
   reverseColors?: boolean;
   backgroundColor?: string;
+  color?: string;
   formatValue?: (n: any) => string;
   showLabel?: boolean;
   showChange?: boolean;
@@ -26,6 +27,7 @@ export const MetricCard = ({
   tooltip,
   reverseColors = false,
   backgroundColor,
+  color,
   formatValue = formatNumber,
   showLabel = true,
   showChange = false,
@@ -40,10 +42,11 @@ export const MetricCard = ({
       justifyContent="center"
       paddingX="6"
       paddingY="4"
-      borderRadius
+      borderRadius="10px"
       backgroundColor="surface-base"
       style={backgroundColor ? { backgroundColor } : undefined}
-      border
+      style={{ color }}
+      border="none"
       gap="4"
     >
       {showLabel && (
@@ -63,7 +66,7 @@ export const MetricCard = ({
           )}
         </Row>
       )}
-      <Text size="4xl" weight="bold" wrap="nowrap">
+      <Text weight="bold" wrap="nowrap">
         <AnimatedDiv title={value?.toString()}>{props?.x?.to(x => formatValue(x))}</AnimatedDiv>
       </Text>
       {showChange && (
