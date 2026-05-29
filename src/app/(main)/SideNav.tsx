@@ -54,12 +54,12 @@ export function SideNav(props: any) {
       path: '/websites',
       icon: <Globe />,
     },
-    // {
-    //   id: 'links',
-    //   label: t(labels.links),
-    //   path: '/links',
-    //   icon: <LinkIcon />,
-    // },
+    {
+      id: 'links',
+      label: t(labels.links),
+      path: '/links',
+      icon: <LinkIcon />,
+    },
     // {
     //   id: 'pixels',
     //   label: t(labels.pixels),

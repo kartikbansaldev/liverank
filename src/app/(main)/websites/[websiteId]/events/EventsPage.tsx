@@ -1,5 +1,5 @@
 'use client';
-import { Column, Tab, TabList, TabPanel, Tabs } from '@umami/react-zen';
+import { Column, Tab, TabList, TabPanel, Tabs, Text } from '@umami/react-zen';
 import { type Key, useState } from 'react';
 import { SessionModal } from '@/app/(main)/websites/[websiteId]/sessions/SessionModal';
 import { WebsiteControls } from '@/app/(main)/websites/[websiteId]/WebsiteControls';
@@ -64,6 +64,10 @@ export function EventsPage({ websiteId }) {
 
   return (
     <Column gap="3">
+      <Text >
+        Add `data-qlytics-event="Event Name"` to any button or link to create and track a custom event.
+      </Text>
+
       <WebsiteControls websiteId={websiteId} />
       <LoadingPanel
         data={metrics}

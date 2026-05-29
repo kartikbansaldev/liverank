@@ -15,12 +15,12 @@ export function WebsiteSettings({ websiteId }: { websiteId: string; openExternal
       <Panel>
         <WebsiteTrackingCode websiteId={websiteId} />
       </Panel>
-      <Panel>
+      {/* <Panel>
         <WebsiteReplaySettings websiteId={websiteId} />
       </Panel>
       <Panel>
         <WebsiteShareForm websiteId={websiteId} />
-      </Panel>
+      </Panel> */}
       <Panel>
         <WebsiteData websiteId={websiteId} />
       </Panel>
