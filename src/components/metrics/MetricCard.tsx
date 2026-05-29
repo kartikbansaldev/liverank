@@ -13,6 +13,7 @@ export interface MetricCardProps {
   label?: string;
   tooltip?: ReactNode;
   reverseColors?: boolean;
+  backgroundColor?: string;
   formatValue?: (n: any) => string;
   showLabel?: boolean;
   showChange?: boolean;
@@ -24,6 +25,7 @@ export const MetricCard = ({
   label,
   tooltip,
   reverseColors = false,
+  backgroundColor,
   formatValue = formatNumber,
   showLabel = true,
   showChange = false,
@@ -39,7 +41,7 @@ export const MetricCard = ({
       paddingX="6"
       paddingY="4"
       borderRadius
-      backgroundColor="surface-base"
+      backgroundColor={backgroundColor ?? 'surface-base'}
       border
       gap="4"
     >

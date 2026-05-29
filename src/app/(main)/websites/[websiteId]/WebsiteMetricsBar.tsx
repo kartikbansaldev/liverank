@@ -29,18 +29,21 @@ export function WebsiteMetricsBar({
           label: t(labels.visitors),
           change: visitors - comparison.visitors,
           formatValue: formatLongNumber,
+          backgroundColor: '#C5CAFF',
         },
         {
           value: visits,
           label: t(labels.visits),
           change: visits - comparison.visits,
           formatValue: formatLongNumber,
+          backgroundColor: '#E1E7E9',
         },
         {
           value: pageviews,
           label: t(labels.views),
           change: pageviews - comparison.pageviews,
           formatValue: formatLongNumber,
+          backgroundColor: '#000000',
         },
         {
           label: t(labels.bounceRate),
@@ -51,6 +54,7 @@ export function WebsiteMetricsBar({
             (Math.min(comparison.visits, comparison.bounces) / comparison.visits) * 100,
           formatValue: n => `${Math.round(+n)}%`,
           reverseColors: true,
+          backgroundColor: '#F6F6F6',
         },
         {
           label: t(labels.visitDuration),
@@ -59,6 +63,7 @@ export function WebsiteMetricsBar({
           change: totaltime / visits - comparison.totaltime / comparison.visits,
           formatValue: n =>
             `${+n < 0 ? '-' : ''}${formatShortTime(Math.abs(~~n), ['m', 's'], ' ')}`,
+          backgroundColor: '#606BD0',
         },
       ]
     : null;
@@ -72,7 +77,7 @@ export function WebsiteMetricsBar({
       minHeight="136px"
     >
       <MetricsBar>
-        {metrics?.map(({ label, value, prev, change, formatValue, reverseColors }) => {
+        {metrics?.map(({ label, value, prev, change, formatValue, reverseColors, backgroundColor }) => {
           return (
             <MetricCard
               key={label}
@@ -82,6 +87,7 @@ export function WebsiteMetricsBar({
               change={change}
               formatValue={formatValue}
               reverseColors={reverseColors}
+              backgroundColor={backgroundColor}
               showChange={!isAllTime}
             />
           );

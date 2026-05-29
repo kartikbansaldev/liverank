@@ -124,7 +124,7 @@ export function SideNav(props: any) {
                         style={{
                           backgroundColor: isSelected ? '#E1E7E9' : undefined,
                           hover: { backgroundColor: '#E1E7E9' },
-                    }}
+                        }} 
                       >
                         <IconLabel
                           icon={icon}
