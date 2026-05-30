@@ -56,8 +56,9 @@ export function getColor(seed: string, min: number = 0, max: number = 255) {
 }
 
 export function getThemeColors(theme: string) {
-  const { primary, text, line, fill } = THEME_COLORS[theme];
+  const { primary, secondary, text, line, fill } = THEME_COLORS[theme];
   const primaryColor = colord(THEME_COLORS[theme].primary);
+  const secondaryColor = colord(THEME_COLORS[theme].secondary);
 
   return {
     colors: {
@@ -68,15 +69,15 @@ export function getThemeColors(theme: string) {
         text,
         line,
         views: {
-          hoverBackgroundColor: primaryColor.alpha(0.7).toRgbString(),
-          backgroundColor: primaryColor.alpha(0.4).toRgbString(),
-          borderColor: primaryColor.alpha(0.7).toRgbString(),
-          hoverBorderColor: primaryColor.toRgbString(),
+          hoverBackgroundColor: secondaryColor.alpha(1).toRgbString(),
+          backgroundColor: secondaryColor.alpha(1).toRgbString(),
+          borderColor: secondaryColor.alpha(0).toRgbString(),
+          hoverBorderColor: secondaryColor.toRgbString(),
         },
         visitors: {
-          hoverBackgroundColor: primaryColor.alpha(0.9).toRgbString(),
-          backgroundColor: primaryColor.alpha(0.6).toRgbString(),
-          borderColor: primaryColor.alpha(0.9).toRgbString(),
+          hoverBackgroundColor: primaryColor.alpha(1).toRgbString(),
+          backgroundColor: primaryColor.alpha(1).toRgbString(),
+          borderColor: primaryColor.alpha(0).toRgbString(),
           hoverBorderColor: primaryColor.toRgbString(),
         },
       },
