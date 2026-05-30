@@ -93,7 +93,7 @@ export function WeeklyTraffic({ websiteId }: { websiteId: string }) {
                               width="16px"
                               height="16px"
                               borderRadius="full"
-                              style={{ opacity: pct, transform: `scale(${pct})` }}
+                              style={{ opacity: pct,backgroundColor: '#606BD0' , transform: `scale(${pct})` }}
                             />
                           </Row>
                         </Focusable>

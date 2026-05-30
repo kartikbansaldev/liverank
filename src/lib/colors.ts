@@ -83,7 +83,7 @@ export function getThemeColors(theme: string) {
       },
       map: {
         baseColor: primary,
-        fillColor: fill,
+        fillColor: secondary,
         strokeColor: primary,
         hoverColor: primary,
       },
