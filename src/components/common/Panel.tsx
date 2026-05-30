@@ -53,7 +53,7 @@ export function Panel({
       paddingY="6"
       paddingX={{ base: '3', md: '6' }}
       border
-      borderRadius
+      borderRadius="md"
       backgroundColor="surface-base"
       position="relative"
       gap

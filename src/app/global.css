@@ -1,17 +1,22 @@
 :root {
   --font-family: var(--font-inter), sans-serif;
-  --primary: #606BD0;
+  --primary: #C5CAFF;
   --primary-foreground: #FFFFFF;
 }
 
 html,
 body {
   font-family: var(--font-family), sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   color: var(--text-primary);
   background-color: white;
   width: 100%;
   min-height: 100vh;
+}
+button {
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  color: black !important;
 }
 
 html[style*="padding-right"] {
