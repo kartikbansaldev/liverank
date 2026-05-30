@@ -61,6 +61,11 @@ function BarChartComponent({
   const chartOptions: any = useMemo(() => {
     return {
       __id: Date.now(),
+      elements: {
+        bar: {
+          borderRadius: 8,
+        },
+      },
       scales: {
         x: {
           type: XAxisType,
