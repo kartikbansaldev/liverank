@@ -17,21 +17,29 @@ export function EventsMetricsBar({ websiteId }: { websiteId: string }) {
             value={data?.visitors?.value}
             label={t(labels.visitors)}
             formatValue={formatLongNumber}
+            backgroundColor: '#C5CAFF'
+          color: '#000000'
           />
           <MetricCard
             value={data?.visits?.value}
             label={t(labels.visits)}
             formatValue={formatLongNumber}
+            backgroundColor: '#E1E7E9'
+          color: '#000000'
           />
           <MetricCard
             value={data?.pageviews?.value}
             label={t(labels.views)}
             formatValue={formatLongNumber}
+            backgroundColor: '#1C1C1C'
+          color: '#ffffff'
           />
           <MetricCard
             value={data?.events?.value}
             label={t(labels.events)}
             formatValue={formatLongNumber}
+            backgroundColor: '#F6F6F6'
+          color: '#000000'
           />
         </MetricsBar>
       )}

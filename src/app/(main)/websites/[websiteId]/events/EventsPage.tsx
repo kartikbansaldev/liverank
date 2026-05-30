@@ -64,9 +64,9 @@ export function EventsPage({ websiteId }) {
 
   return (
     <Column gap="3">
-      <Text >
-        Add `data-qlytics-event="Event Name"` to any button or link to create and track a custom event.
-      </Text>
+      <div style={{ backgroundColor: '#1c1c1c', color: '#ffffff', padding: '12px', borderRadius: '8px' }}>
+        Add <bold>data-qlytics-event="Event Name"</bold> to any button or link to create and track a custom event.
+      </div>
 
       <WebsiteControls websiteId={websiteId} />
       <LoadingPanel

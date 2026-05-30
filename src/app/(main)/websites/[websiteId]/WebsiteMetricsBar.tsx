@@ -46,7 +46,7 @@ export function WebsiteMetricsBar({
           label: t(labels.views),
           change: pageviews - comparison.pageviews,
           formatValue: formatLongNumber,
-          backgroundColor: '#000000',
+          backgroundColor: '#1C1C1C',
           color: '#ffffff',
         },
         {
