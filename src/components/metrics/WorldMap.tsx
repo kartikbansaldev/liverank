@@ -45,9 +45,10 @@ export function WorldMap({ websiteId, data, ...props }: WorldMapProps) {
       return colors.map.fillColor;
     }
 
-    return colord(colors.map.baseColor)
-      [theme === 'light' ? 'lighten' : 'darken'](0.4 * (1.0 - country.z / 100))
-      .toHex();
+    // return colord(colors.map.baseColor)
+    //   [theme === 'light' ? 'lighten' : 'darken'](0.4 * (1.0 - country.z / 100))
+    //   .toHex();
+    return colors.map.baseColor;
   };
 
   const getOpacity = (code: string) => {
